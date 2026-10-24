@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Stream | NFLBite — NFL Webcast &amp; Reddit NFL Streams</title>
+  <meta name="description" content="Watch live NFLBite streams — NFL Webcast and Reddit NFL Streams coverage in HD across NFL, NCAA, UFC, Boxing, NBA, MLB and Soccer.">
+  <meta name="keywords" content="NFLBite, NFL Webcast, Reddit NFL Streams, live NFL streams, NCAA football, NFL schedule, UFC streams, boxing streams, NBA streams, MLB streams">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="theme-color" content="#0b1a2c">
+  <meta property="og:title" content="Live Stream | NFLBite — NFL Webcast &amp; Reddit NFL Streams">
+  <meta property="og:description" content="Watch live NFLBite streams — NFL Webcast and Reddit NFL Streams coverage in HD across NFL, NCAA, UFC, Boxing, NBA, MLB and Soccer.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NFLBite">
+  <link rel="icon" type="image/svg+xml" href="https://nflwebcast.com/wp-content/uploads/2021/08/NFL-logo-01.svg">
+  <link rel="apple-touch-icon" href="https://nflwebcast.com/wp-content/uploads/2021/08/NFL-logo-01.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    body {
+      background: #071320;
+      background-image:
+        radial-gradient(circle at 15% 0%, rgba(220, 38, 38, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 100%, rgba(59, 130, 246, 0.08) 0%, transparent 40%);
+      background-attachment: fixed;
+      color: #e6edf3;
+      line-height: 1.6;
+      padding: 1.5rem 2rem 90px 2rem;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    /* ===== TOP HEADER BAR ===== */
+    .top-header {
+      background: linear-gradient(135deg, #0b1a2c 0%, #132b45 100%);
+      border-radius: 14px;
+      padding: 0.85rem 1.6rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 12px;
+      z-index: 100;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.5), 0 0 0 1px rgba(248, 113, 113, 0.12);
+      backdrop-filter: blur(10px);
+    }
+    .top-header .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: -0.4px;
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .top-header .brand img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+    .top-header .header-right {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+    .top-header .back-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: rgba(0,0,0,0.25);
+      color: #e6edf3;
+      border: 1px solid rgba(248, 113, 113, 0.15);
+      padding: 0.45rem 1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.78rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .top-header .back-btn:hover {
+      background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+      color: #fff;
+      border-color: rgba(248, 113, 113, 0.5);
+    }
+    .top-header .back-btn i { font-size: 0.72rem; }
+    .top-header .live-dot {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(248, 113, 113, 0.12);
+      padding: 0.3rem 0.85rem;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.7rem;
+      color: #fca5a5;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      border: 1px solid rgba(248, 113, 113, 0.25);
+    }
+    .top-header .live-dot i {
+      color: #ef4444;
+      font-size: 0.5rem;
+      animation: pulse 1.5s infinite;
+    }
+    .top-header .header-discord {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: #5865F2;
+      color: #fff;
+      padding: 0.4rem 0.95rem;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .top-header .header-discord i { font-size: 0.85rem; }
+    .top-header .header-discord:hover {
+      background: #4752c4;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    /* ===== AD SLOT: TOP ===== */
+    .ad-slot-top {
+      width: 100%;
+      max-width: 728px;
+      height: 90px;
+      margin: 0 auto 1.75rem;
+      background: rgba(11, 26, 44, 0.55);
+      border: 1px dashed rgba(248, 113, 113, 0.3);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64748b;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* ===== AD CLOSE BUTTON ===== */
+    .ad-close-btn {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.6);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      cursor: pointer;
+      z-index: 10;
+      transition: 0.2s;
+    }
+    .ad-close-btn:hover {
+      background: #ef4444;
+      border-color: #ef4444;
+    }
+    .ad-close-btn i {
+      pointer-events: none;
+    }
+
+    /* ===== MAIN LAYOUT ===== */
+    .stream-layout {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+    .player-column {
+      flex: 1;
+      min-width: 0;
+      margin-right: 320px;
+    }
+    .stream-sidebar {
+      width: 300px;
+      position: fixed;
+      top: 100px;
+      right: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      z-index: 50;
+    }
+
+    /* ===== MATCH INFO BAR ===== */
+    .match-info-bar {
+      background: linear-gradient(135deg, #0b1a2c 0%, #0e2338 100%);
+      border-radius: 16px;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.4), 0 0 0 1px rgba(248, 113, 113, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    .match-info-bar::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      right: -15%;
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(circle, rgba(248, 113, 113, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .match-info-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.9rem;
+      border-bottom: 1px solid rgba(248, 113, 113, 0.15);
+      position: relative;
+      z-index: 1;
+    }
+    .match-league {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #fca5a5;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+    .match-league i { font-size: 0.9rem; color: #f87171; }
+    .match-date-time {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+      color: #c4d3df;
+    }
+    .match-date-time i { color: #f87171; font-size: 0.7rem; }
+
+    .match-teams-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .match-team {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      min-width: 160px;
+    }
+    .match-team.right { flex-direction: row-reverse; }
+    .match-team-logo-wrap {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(248, 113, 113, 0.18) 0%, rgba(59, 130, 246, 0.12) 100%);
+      border: 2px solid rgba(248, 113, 113, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      padding: 7px;
+    }
+    .match-team-logo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .match-team .team-name {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: #ffffff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 160px;
+    }
+    .match-vs {
+      font-weight: 800;
+      font-size: 0.78rem;
+      color: #fca5a5;
+      background: rgba(220, 38, 38, 0.15);
+      border: 1px solid rgba(248, 113, 113, 0.3);
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      flex-shrink: 0;
+      letter-spacing: 0.5px;
+    }
+
+    /* ===== VIDEO PLAYER ===== */
+    .player-wrapper {
+      background: linear-gradient(135deg, #0b1a2c 0%, #0e2338 100%);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.45), 0 0 0 1px rgba(248, 113, 113, 0.1);
+    }
+    .player-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.8rem 1.3rem;
+      background: linear-gradient(90deg, rgba(220, 38, 38, 0.15) 0%, rgba(0,0,0,0) 100%);
+      border-bottom: 1px solid rgba(248, 113, 113, 0.15);
+    }
+    .player-header .title {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+    .player-header .title i { color: #f87171; font-size: 0.95rem; }
+    .player-header .quality-badge {
+      background: rgba(248, 113, 113, 0.15);
+      color: #fca5a5;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 0.25rem 0.75rem;
+      border-radius: 30px;
+      letter-spacing: 0.5px;
+      border: 1px solid rgba(248, 113, 113, 0.25);
+    }
+    .video-container {
+      position: relative;
+      width: 100%;
+      background: #000;
+      aspect-ratio: 16 / 9;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .no-stream {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #94a3b8;
+      font-size: 0.95rem;
+      gap: 0.7rem;
+      text-align: center;
+      padding: 1rem;
+    }
+    .no-stream i { font-size: 2.2rem; color: #f87171; opacity: 0.6; }
+
+    /* ===== SIDEBAR ADS ===== */
+    .ad-slot-sidebar {
+      width: 300px;
+      height: 250px;
+      background: rgba(11, 26, 44, 0.55);
+      border: 1px dashed rgba(248, 113, 113, 0.3);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64748b;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .ad-slot-sidebar-bottom {
+      width: 300px;
+      height: 60px;
+      background: rgba(11, 26, 44, 0.55);
+      border: 1px dashed rgba(248, 113, 113, 0.3);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64748b;
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      overflow: hidden;
+      position: relative;
+    }
+    .ad-slot-sidebar-bottom .ad-inner-468 {
+      width: 468px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ===== STICKY BOTTOM AD ===== */
+    .ad-slot-sticky-bottom {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      pointer-events: none;
+    }
+    .ad-slot-sticky-bottom .ad-inner {
+      width: 728px;
+      max-width: 95%;
+      height: 90px;
+      background: linear-gradient(135deg, #0b1a2c 0%, #132b45 100%);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #94a3b8;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      position: relative;
+      pointer-events: auto;
+      box-shadow: 0 -8px 28px rgba(0,0,0,0.55), 0 0 0 1px rgba(248, 113, 113, 0.15);
+      overflow: hidden;
+    }
+
+    /* ===== INFO NOTE ===== */
+    .info-note {
+      background: linear-gradient(135deg, #0b1a2c 0%, #0e2338 100%);
+      border-radius: 14px;
+      padding: 1.2rem 1.6rem;
+      color: #c4d3df;
+      font-size: 0.88rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.35), 0 0 0 1px rgba(248, 113, 113, 0.08);
+      border-left: 3px solid #f87171;
+    }
+    .info-note strong { color: #fca5a5; }
+
+    /* footer */
+    .footer-note {
+      margin-top: 2rem;
+      font-size: 0.75rem;
+      color: #64748b;
+      text-align: center;
+      border-top: 1px solid rgba(248, 113, 113, 0.1);
+      padding-top: 1.5rem;
+      letter-spacing: 0.3px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1300px) {
+      .player-column { margin-right: 320px; }
+      .stream-sidebar { right: 1rem; }
+    }
+    @media (max-width: 1100px) {
+      .stream-layout { flex-direction: column; }
+      .player-column { max-width: 100%; width: 100%; margin-right: 0; }
+      .stream-sidebar {
+        position: static;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        top: auto;
+        right: auto;
+        margin-bottom: 1.5rem;
+      }
+      .ad-slot-sidebar { flex: 1; min-width: 280px; }
+      .ad-slot-sidebar-bottom { flex: 1; min-width: 280px; }
+    }
+    @media (max-width: 750px) {
+      body { padding: 0.8rem 0.8rem 100px 0.8rem; }
+      .top-header { padding: 0.7rem 1rem; flex-wrap: wrap; gap: 0.6rem; top: 8px; }
+      .top-header .brand { font-size: 1.15rem; }
+      .top-header .brand img { width: 26px; height: 26px; }
+      .top-header .header-discord { padding: 0.35rem 0.75rem; font-size: 0.68rem; }
+      .top-header .back-btn { padding: 0.35rem 0.75rem; font-size: 0.68rem; }
+      .match-info-bar { padding: 1rem 1.1rem; }
+      .match-teams-row { gap: 0.9rem; }
+      .match-team { min-width: auto; flex: 1; }
+      .match-team-logo-wrap { width: 44px; height: 44px; padding: 5px; }
+      .match-team .team-name { font-size: 0.9rem; max-width: 100px; }
+      .match-vs { width: 34px; height: 34px; font-size: 0.68rem; }
+      .match-info-top { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
+      .ad-slot-top { height: 70px; }
+      .ad-slot-sticky-bottom { height: 70px; }
+      .ad-slot-sticky-bottom .ad-inner { height: 70px; }
+      .info-note { padding: 1rem 1.2rem; font-size: 0.82rem; }
+    }
+    @media (max-width: 480px) {
+      .match-team { flex-direction: column; gap: 0.4rem; text-align: center; }
+      .match-team.right { flex-direction: column; }
+      .match-team .team-name { font-size: 0.82rem; max-width: 90px; }
+      .match-team-logo-wrap { width: 42px; height: 42px; }
+      .match-vs { width: 30px; height: 30px; font-size: 0.62rem; }
+      .player-header { padding: 0.65rem 1rem; flex-wrap: wrap; gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ===== TOP HEADER BAR ===== -->
+  <div class="top-header">
+    <a href="index.html" class="brand">
+      <img src="https://nflwebcast.com/wp-content/uploads/2021/08/NFL-logo-01.svg" alt="NFLBite Logo">
+      <span>NFLBite</span>
+    </a>
+    <div class="header-right">
+      <div class="live-dot">
+        <i class="fas fa-circle"></i> Live
+      </div>
+      <a href="https://discord.gg/q2Vt5QHAz" target="_blank" rel="noopener noreferrer" class="header-discord">
+        <i class="fab fa-discord"></i> Join Discord
+      </a>
+      <a href="index.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== AD SLOT: TOP 728x90 ===== -->
+  <div class="ad-slot-top" id="topBannerAd">
+    <button class="ad-close-btn" onclick="closeAd('topBannerAd')" title="Close ad">
+      <i class="fas fa-times"></i>
+    </button>
+    <script>
+      atOptions = {
+        'key' : '6786ca601524f56715d5859a0fc7658f',
+        'format' : 'iframe',
+        'height' : 90,
+        'width' : 728,
+        'params' : {}
+      };
+    </script>
+    <script src="https://czernik.org/22/6786ca601524f56715d5859a0fc7658f"></script>
+  </div>
+
+  <!-- ===== MAIN LAYOUT: PLAYER + SIDEBAR ===== -->
+  <div class="stream-layout">
+
+    <!-- LEFT: MATCH INFO + PLAYER -->
+    <div class="player-column">
+
+      <!-- MATCH INFO BAR -->
+      <div class="match-info-bar" id="matchInfoBar">
+        <div class="match-info-top">
+          <div class="match-league">
+            <i class="fas fa-trophy"></i> <span id="infoLeague">Loading...</span>
+          </div>
+          <div class="match-date-time">
+            <i class="far fa-calendar-alt"></i>
+            <span id="infoDate">—</span>
+            <i class="far fa-clock" style="margin-left:0.5rem;"></i>
+            <span id="infoTime">—</span>
+          </div>
+        </div>
+        <div class="match-teams-row">
+          <div class="match-team">
+            <div class="match-team-logo-wrap">
+              <img id="infoTeam1Logo" src="https://a.espncdn.com/i/teamlogos/default-team-logo-500.png" alt="Team 1">
+            </div>
+            <span class="team-name" id="infoTeam1">TBD</span>
+          </div>
+          <div class="match-vs">VS</div>
+          <div class="match-team right">
+            <span class="team-name" id="infoTeam2">TBD</span>
+            <div class="match-team-logo-wrap">
+              <img id="infoTeam2Logo" src="https://a.espncdn.com/i/teamlogos/default-team-logo-500.png" alt="Team 2">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO PLAYER -->
+      <div class="player-wrapper">
+        <div class="player-header">
+          <div class="title">
+            <i class="fas fa-play-circle"></i> Live Stream
+          </div>
+          <div class="quality-badge">HD</div>
+        </div>
+        <div class="video-container" id="videoContainer">
+          <div class="no-stream" id="noStream">
+            <i class="fas fa-tv"></i>
+            <span>Loading stream...</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT: SIDEBAR ADS -->
+    <div class="stream-sidebar">
+      <div class="ad-slot-sidebar" id="sidebarAd1">
+        <button class="ad-close-btn" onclick="closeAd('sidebarAd1')" title="Close ad">
+          <i class="fas fa-times"></i>
+        </button>
+        <script>
+          atOptions = {
+            'key' : '8c159fd6fcf52c9cd44c80c9f4bbcfc4',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
+          };
+        </script>
+        <script src="https://czernik.org/22/8c159fd6fcf52c9cd44c80c9f4bbcfc4"></script>
+      </div>
+
+      <div class="ad-slot-sidebar-bottom" id="sidebarAd2">
+        <button class="ad-close-btn" onclick="closeAd('sidebarAd2')" title="Close ad">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="ad-inner-468">
+          <script>
+            atOptions = {
+              'key' : '1138c5e38e46ae64e14e6c96b32d3186',
+              'format' : 'iframe',
+              'height' : 60,
+              'width' : 468,
+              'params' : {}
+            };
+          </script>
+          <script src="https://czernik.org/22/1138c5e38e46ae64e14e6c96b32d3186"></script>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== INFO NOTE ===== -->
+  <div class="info-note">
+    <strong>Note:</strong> If the stream doesn't load, refresh the page or try a different match.
+    Still not working? <strong>Try using a VPN</strong> — some streams may be geo-restricted.
+  </div>
+
+  <!-- footer -->
+  <div class="footer-note">
+    NFLBite · Live NFL Webcast, Reddit NFL Streams, NCAA, UFC, Boxing, NBA, MLB &amp; Soccer hub.
+  </div>
+</div>
+
+<!-- ===== AD SLOT: BOTTOM STICKY 728x90 ===== -->
+<div class="ad-slot-sticky-bottom" id="stickyBottomAd">
+  <div class="ad-inner">
+    <button class="ad-close-btn" onclick="closeAd('stickyBottomAd')" title="Close ad">
+      <i class="fas fa-times"></i>
+    </button>
+    <script>
+      atOptions = {
+        'key' : '6786ca601524f56715d5859a0fc7658f',
+        'format' : 'iframe',
+        'height' : 90,
+        'width' : 728,
+        'params' : {}
+      };
+    </script>
+    <script src="https://czernik.org/22/6786ca601524f56715d5859a0fc7658f"></script>
+  </div>
+</div>
+
+<script>
+  // ============================================
+  // ===== AD CLOSE + AUTO REOPEN LOGIC =====
+  // ============================================
+  function closeAd(adId) {
+    const ad = document.getElementById(adId);
+    if (!ad) return;
+    ad.style.display = 'none';
+    setTimeout(function() {
+      ad.style.display = '';
+    }, 2500);
+  }
+
+  // ============================================
+  // ===== STREAM PLAYER LOGIC =====
+  // ============================================
+  (function() {
+    const API_URL = "https://ovogoal.cyou/api/v2/flyembed2.json";
+
+    const params = new URLSearchParams(window.location.search);
+    const matchId = params.get('id');
+
+    const videoContainer = document.getElementById('videoContainer');
+    const noStream = document.getElementById('noStream');
+
+    function formatTime(timeStr) {
+      if (!timeStr) return 'TBD';
+      try {
+        const [hourStr, minute] = timeStr.split(':');
+        let hour = parseInt(hourStr, 10);
+        const ampm = hour >= 12 ? 'PM' : 'AM';
+        hour = hour % 12 || 12;
+        return `${hour}:${minute} ${ampm}`;
+      } catch (e) { return timeStr; }
+    }
+
+    function formatDate(dateStr) {
+      if (!dateStr) return '—';
+      const parts = dateStr.split('-');
+      if (parts.length !== 3) return dateStr;
+      const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      const monthIdx = parseInt(parts[1], 10) - 1;
+      const day = parseInt(parts[2], 10);
+      return `${months[monthIdx]} ${day}, ${parts[0]}`;
+    }
+
+    function showError(msg) {
+      noStream.innerHTML = '<i class="fas fa-exclamation-triangle"></i><span>' + msg + '</span>';
+      noStream.style.display = 'flex';
+    }
+
+    function updateTitle(team1, team2) {
+      if (!team1 || !team2 || team1 === 'TBD' || team2 === 'TBD') {
+        document.title = 'Live Stream | NFLBite — NFL Webcast & Reddit NFL Streams';
+        return;
+      }
+      document.title = team1 + ' vs ' + team2 + ' | Live Stream — NFLBite';
+    }
+
+    if (!matchId) {
+      showError('No match ID provided.');
+      updateTitle('', '');
+      return;
+    }
+
+    fetch(API_URL + '?t=' + Date.now())
+      .then(res => {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return res.json();
+      })
+      .then(data => {
+        if (!Array.isArray(data)) throw new Error('Invalid data format');
+
+        const match = data.find(m => String(m.MatchID) === String(matchId));
+
+        if (!match) {
+          showError('Match not found. It may have ended or been removed.');
+          updateTitle('', '');
+          return;
+        }
+
+        const team1 = match.Team1?.trim() || 'TBD';
+        const team2 = match.Team2?.trim() || 'TBD';
+        const league = (match.League || match.Sport || 'Sports').replace(/\r?\n/g, ' ').trim();
+        const date = match.MatchDate || '';
+        const time = match.MatchStartTime || '';
+        const embed = match.IframeURL || '';
+
+        document.getElementById('infoLeague').textContent = league;
+        document.getElementById('infoDate').textContent = formatDate(date);
+        document.getElementById('infoTime').textContent = formatTime(time);
+        document.getElementById('infoTeam1').textContent = team1;
+        document.getElementById('infoTeam2').textContent = team2;
+
+        const img1 = document.getElementById('infoTeam1Logo');
+        img1.src = match.Team1Logo || 'https://a.espncdn.com/i/teamlogos/default-team-logo-500.png';
+        img1.onerror = function() { this.src = 'https://a.espncdn.com/i/teamlogos/default-team-logo-500.png'; };
+
+        const img2 = document.getElementById('infoTeam2Logo');
+        img2.src = match.Team2Logo || 'https://a.espncdn.com/i/teamlogos/default-team-logo-500.png';
+        img2.onerror = function() { this.src = 'https://a.espncdn.com/i/teamlogos/default-team-logo-500.png'; };
+
+        updateTitle(team1, team2);
+        setTimeout(function() { updateTitle(team1, team2); }, 400);
+        setTimeout(function() { updateTitle(team1, team2); }, 1500);
+
+        if (embed && embed.trim() !== '') {
+          noStream.style.display = 'none';
+          const iframe = document.createElement('iframe');
+          iframe.src = embed;
+          iframe.allow = 'autoplay; fullscreen; encrypted-media; picture-in-picture';
+          iframe.allowFullscreen = true;
+          iframe.setAttribute('frameborder', '0');
+          iframe.setAttribute('scrolling', 'no');
+          iframe.setAttribute('referrerpolicy', 'no-referrer');
+          videoContainer.appendChild(iframe);
+        } else {
+          showError('Stream not available for this match.');
+        }
+      })
+      .catch(err => {
+        console.error('Error loading match:', err);
+        showError('Failed to load stream. Please try again later.');
+        updateTitle('', '');
+      });
+  })();
+</script>
+
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,5048377,4,9,110,60,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?5048377&101" alt="website stats" border="0"></a></noscript>
+<!-- Histats.com  END -->
+
+
+</body>
+</html>

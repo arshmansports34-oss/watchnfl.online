@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NFLBite | NFL Webcast, Reddit NFL Streams &amp; Live HD</title>
+  <meta name="description" content="NFLBite is the fastest live destination for NFL Webcast and Reddit NFL Streams. Watch every NFL, NCAA, UFC, Boxing, NBA, MLB and Soccer matchup with synced countdowns, HD schedule cards and instant updates.">
+  <meta name="keywords" content="NFLBite, NFL Webcast, Reddit NFL Streams, NFL streams, NCAA football, live NFL, NFL schedule, UFC streams, boxing streams, NBA streams, MLB streams, soccer streams">
+  <meta name="author" content="NFLBite">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+  <meta name="theme-color" content="#0b1a2c">
+  <link rel="icon" type="image/svg+xml" href="https://nflwebcast.com/wp-content/uploads/2021/08/NFL-logo-01.svg">
+  <link rel="apple-touch-icon" href="https://nflwebcast.com/wp-content/uploads/2021/08/NFL-logo-01.svg">
+  <link rel="canonical" href="https://watchnfl.online/">
+  <meta property="og:title" content="NFLBite | NFL Webcast, Reddit NFL Streams &amp; Live HD">
+  <meta property="og:description" content="NFLBite is the fastest live destination for NFL Webcast and Reddit NFL Streams. Watch every NFL, NCAA, UFC, Boxing, NBA, MLB and Soccer matchup with synced countdowns, HD schedule cards and instant updates.">
+  <meta property="og:url" content="https://watchnfl.online/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NFLBite">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NFLBite | NFL Webcast, Reddit NFL Streams &amp; Live HD">
+  <meta name="twitter:description" content="NFLBite is the fastest live destination for NFL Webcast and Reddit NFL Streams. Watch every NFL, NCAA, UFC, Boxing, NBA, MLB and Soccer matchup with synced countdowns, HD schedule cards and instant updates.">
+  <meta name="twitter:url" content="https://watchnfl.online/">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "NFLBite",
+    "alternateName": ["NFL Webcast", "Reddit NFL Streams", "NFL Streams"],
+    "url": "https://watchnfl.online/",
+    "description": "NFLBite — live NFL Webcast and Reddit NFL Streams hub with real-time NFL, NCAA, UFC, Boxing, NBA, MLB and Soccer schedules.",
+    "inLanguage": "en-US",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://watchnfl.online/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "NFLBite",
+    "url": "https://watchnfl.online/",
+    "logo": "https://nflwebcast.com/wp-content/uploads/2021/08/NFL-logo-01.svg",
+    "sameAs": [
+      "https://discord.gg/q2Vt5QHAz"
+    ]
+  }
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    body {
+      background: #071320;
+      background-image:
+        radial-gradient(circle at 15% 0%, rgba(220, 38, 38, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 100%, rgba(59, 130, 246, 0.08) 0%, transparent 40%);
+      background-attachment: fixed;
+      color: #e6edf3;
+      line-height: 1.6;
+      padding: 1.5rem 2rem 90px 2rem;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .kw { color: #f87171; font-weight: 700; }
+
+    .top-header {
+      background: linear-gradient(135deg, #0b1a2c 0%, #132b45 100%);
+      border-radius: 14px;
+      padding: 0.85rem 1.6rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 12px;
+      z-index: 100;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.5), 0 0 0 1px rgba(248, 113, 113, 0.12);
+      backdrop-filter: blur(10px);
+    }
+    .top-header .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: -0.4px;
+      color: #ffffff;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .top-header .brand img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+    .top-header .header-right {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+    .top-header .live-dot {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(248, 113, 113, 0.12);
+      padding: 0.3rem 0.85rem;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.7rem;
+      color: #fca5a5;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      border: 1px solid rgba(248, 113, 113, 0.25);
+    }
+    .top-header .live-dot i {
+      color: #ef4444;
+      font-size: 0.5rem;
+      animation: pulse 1.5s infinite;
+    }
+    .top-header .header-discord {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: #5865F2;
+      color: #fff;
+      padding: 0.4rem 0.95rem;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .top-header .header-discord i { font-size: 0.85rem; }
+    .top-header .header-discord:hover {
+      background: #4752c4;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .header-container {
+      background: linear-gradient(135deg, #0b1a2c 0%, #132b45 100%);
+      border-radius: 16px;
+      padding: 2.2rem 2.4rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 0 0 1px rgba(248, 113, 113, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    .header-container::before {
+      content: "";
+      position: absolute;
+      top: -60%;
+      right: -15%;
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(248, 113, 113, 0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .header-container::after {
+      content: "";
+      position: absolute;
+      bottom: -60%;
+      left: -15%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .header-container h1 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.35;
+      color: #ffffff;
+      margin-bottom: 0.75rem;
+      position: relative;
+      z-index: 1;
+    }
+    .header-container p {
+      color: #c4d3df;
+      font-size: 0.95rem;
+      max-width: 950px;
+      line-height: 1.7;
+      position: relative;
+      z-index: 1;
+    }
+
+    .ad-slot-top {
+      width: 100%;
+      max-width: 728px;
+      height: 90px;
+      margin: 0 auto 1.75rem;
+      background: rgba(11, 26, 44, 0.55);
+      border: 1px dashed rgba(248, 113, 113, 0.3);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64748b;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .sport-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.75rem;
+    }
+    .sport-tab {
+      background: rgba(11, 26, 44, 0.75);
+      border: 1px solid rgba(248, 113, 113, 0.12);
+      padding: 0.55rem 1.25rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.8rem;
+      color: #c4d3df;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .sport-tab i { font-size: 0.78rem; opacity: 0.8; }
+    .sport-tab.active, .sport-tab:hover {
+      background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+      color: #ffffff;
+      border-color: rgba(248, 113, 113, 0.5);
+      box-shadow: 0 4px 16px rgba(220, 38, 38, 0.3);
+    }
+    .sport-tab.active i, .sport-tab:hover i { opacity: 1; }
+
+    .main-layout {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+    .content-area {
+      flex: 1;
+      min-width: 0;
+      margin-right: 320px;
+    }
+
+    .sidebar-area {
+      width: 300px;
+      position: fixed;
+      top: 100px;
+      right: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      z-index: 50;
+    }
+
+    .ad-slot-sidebar {
+      width: 300px;
+      height: 250px;
+      background: rgba(11, 26, 44, 0.55);
+      border: 1px dashed rgba(248, 113, 113, 0.3);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64748b;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .ad-close-btn {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.6);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      cursor: pointer;
+      z-index: 10;
+      transition: 0.2s;
+    }
+    .ad-close-btn:hover {
+      background: #ef4444;
+      border-color: #ef4444;
+    }
+    .ad-close-btn i {
+      pointer-events: none;
+    }
+
+    .sport-section {
+      background: linear-gradient(135deg, #0b1a2c 0%, #0e2338 100%);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.4), 0 0 0 1px rgba(248, 113, 113, 0.08);
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      background: linear-gradient(90deg, rgba(220, 38, 38, 0.15) 0%, rgba(0,0,0,0) 100%);
+      border-bottom: 1px solid rgba(248, 113, 113, 0.15);
+    }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+    }
+    .section-title i { color: #f87171; font-size: 1rem; }
+    .section-title img { width: 24px; height: 24px; object-fit: contain; }
+    .section-count {
+      background: rgba(248, 113, 113, 0.15);
+      color: #fca5a5;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.28rem 0.85rem;
+      border-radius: 30px;
+      letter-spacing: 0.4px;
+      border: 1px solid rgba(248, 113, 113, 0.2);
+    }
+
+    .match-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.6rem;
+      padding: 1rem;
+    }
+
+    .match-card {
+      background: linear-gradient(135deg, rgba(19, 43, 69, 0.9) 0%, rgba(11, 26, 44, 0.9) 100%);
+      border: 1px solid rgba(248, 113, 113, 0.08);
+      border-radius: 14px;
+      padding: 1.1rem 1.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+      flex-wrap: wrap;
+    }
+    .match-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      background: linear-gradient(180deg, #dc2626 0%, #f87171 100%);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+    .match-card:hover {
+      border-color: rgba(248, 113, 113, 0.35);
+      box-shadow: 0 8px 24px rgba(220, 38, 38, 0.15);
+      transform: translateY(-2px);
+    }
+    .match-card:hover::before {
+      opacity: 1;
+    }
+
+    .card-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      min-width: 130px;
+      flex-shrink: 0;
+    }
+    .card-league {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #fca5a5;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .card-league img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .card-time {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
+      color: #94a3b8;
+    }
+    .card-time i { color: #f87171; font-size: 0.7rem; }
+
+    .card-teams {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.2rem;
+      flex: 1;
+      min-width: 0;
+    }
+    .card-team {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      min-width: 0;
+    }
+    .card-team.right {
+      flex-direction: row-reverse;
+    }
+    .card-team-logo-wrap {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(248, 113, 113, 0.15) 0%, rgba(59, 130, 246, 0.1) 100%);
+      border: 2px solid rgba(248, 113, 113, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      padding: 6px;
+    }
+    .card-team-logo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .card-team-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #ffffff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 140px;
+    }
+    .card-vs {
+      font-weight: 800;
+      font-size: 0.68rem;
+      color: #fca5a5;
+      background: rgba(220, 38, 38, 0.15);
+      border: 1px solid rgba(248, 113, 113, 0.25);
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      flex-shrink: 0;
+      letter-spacing: 0.5px;
+    }
+
+    .card-action {
+      flex-shrink: 0;
+    }
+    .watch-btn {
+      background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+      color: #ffffff;
+      border: none;
+      padding: 0.7rem 1.35rem;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.78rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      transition: all 0.22s ease;
+      text-decoration: none;
+      white-space: nowrap;
+      box-shadow: 0 4px 14px rgba(220, 38, 38, 0.35);
+    }
+    .watch-btn i { font-size: 0.7rem; }
+    .watch-btn:hover {
+      background: linear-gradient(135deg, #b91c1c 0%, #7f1d1d 100%);
+      box-shadow: 0 6px 20px rgba(220, 38, 38, 0.5);
+      transform: translateY(-1px);
+    }
+
+    .loading, .error {
+      text-align: center;
+      padding: 3rem 1rem;
+      font-size: 0.95rem;
+      color: #94a3b8;
+      background: linear-gradient(135deg, #0b1a2c 0%, #0e2338 100%);
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+    }
+    .error i { color: #ef4444; font-size: 1.6rem; margin-bottom: 0.75rem; display: block; }
+
+    .article-section {
+      background: linear-gradient(135deg, #0b1a2c 0%, #0e2338 100%);
+      border-radius: 16px;
+      padding: 2.2rem 2.4rem;
+      margin: 2.5rem 0 1.5rem;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.4), 0 0 0 1px rgba(248, 113, 113, 0.08);
+      color: #c4d3df;
+    }
+    .article-section h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.9rem;
+      margin-top: 2rem;
+      letter-spacing: -0.01em;
+      border-left: 3px solid #f87171;
+      padding-left: 0.85rem;
+      line-height: 1.4;
+    }
+    .article-section h2:first-of-type { margin-top: 0; }
+    .article-section p { color: #c4d3df; font-size: 0.92rem; line-height: 1.75; margin-bottom: 1rem; }
+    .article-section ul { list-style: none; margin: 0.5rem 0 1.2rem; padding: 0; }
+    .article-section ul li {
+      position: relative;
+      padding-left: 1.3rem;
+      margin-bottom: 0.6rem;
+      font-size: 0.88rem;
+      color: #c4d3df;
+      line-height: 1.65;
+    }
+    .article-section ul li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55rem;
+      width: 6px;
+      height: 6px;
+      background: #f87171;
+      border-radius: 50%;
+      box-shadow: 0 0 8px rgba(248, 113, 113, 0.6);
+    }
+    .article-section strong { color: #ffffff; font-weight: 700; }
+
+    .faq-item {
+      background: rgba(0,0,0,0.25);
+      border-radius: 10px;
+      padding: 1.15rem 1.35rem;
+      margin-bottom: 0.9rem;
+      border-left: 3px solid #f87171;
+    }
+    .faq-item h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.45rem;
+    }
+    .faq-item p {
+      font-size: 0.86rem;
+      color: #c4d3df;
+      margin-bottom: 0;
+    }
+
+    .footer-note {
+      margin-top: 3rem;
+      font-size: 0.75rem;
+      color: #64748b;
+      text-align: center;
+      border-top: 1px solid rgba(248, 113, 113, 0.1);
+      padding-top: 1.5rem;
+      letter-spacing: 0.3px;
+    }
+
+    .ad-slot-sticky-bottom {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      pointer-events: none;
+    }
+    .ad-slot-sticky-bottom .ad-inner {
+      width: 728px;
+      max-width: 95%;
+      height: 90px;
+      background: linear-gradient(135deg, #0b1a2c 0%, #132b45 100%);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #94a3b8;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      position: relative;
+      pointer-events: auto;
+      box-shadow: 0 -8px 28px rgba(0,0,0,0.55), 0 0 0 1px rgba(248, 113, 113, 0.15);
+      overflow: hidden;
+    }
+
+    @media (max-width: 1300px) {
+      .content-area { margin-right: 320px; }
+      .sidebar-area { right: 1rem; }
+    }
+    @media (max-width: 1100px) {
+      .main-layout { flex-direction: column; }
+      .content-area { margin-right: 0; }
+      .sidebar-area {
+        position: static;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        top: auto;
+        right: auto;
+        margin-bottom: 1.5rem;
+      }
+      .ad-slot-sidebar { flex: 1; min-width: 280px; }
+    }
+    @media (max-width: 900px) {
+      .match-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.9rem;
+      }
+      .card-meta {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        min-width: 0;
+      }
+      .card-teams {
+        justify-content: space-around;
+      }
+      .card-team-name { max-width: 110px; font-size: 0.88rem; }
+      .card-team-logo-wrap { width: 42px; height: 42px; }
+      .card-action { width: 100%; }
+      .watch-btn { width: 100%; justify-content: center; }
+    }
+    @media (max-width: 650px) {
+      body { padding: 0.8rem 0.8rem 100px 0.8rem; }
+      .top-header { padding: 0.7rem 1rem; flex-wrap: wrap; gap: 0.6rem; top: 8px; }
+      .top-header .brand { font-size: 1.15rem; }
+      .top-header .brand img { width: 26px; height: 26px; }
+      .top-header .header-discord { padding: 0.35rem 0.75rem; font-size: 0.68rem; }
+      .header-container { padding: 1.4rem 1.1rem; }
+      .header-container h1 { font-size: 1.1rem; }
+      .header-container p { font-size: 0.82rem; }
+      .article-section { padding: 1.4rem 1.2rem; }
+      .article-section h2 { font-size: 1.2rem; }
+      .article-section p, .article-section ul li { font-size: 0.82rem; }
+      .match-cards-grid { padding: 0.7rem; gap: 0.55rem; }
+      .match-card { padding: 0.9rem 1rem; }
+      .card-team-name { max-width: 90px; font-size: 0.82rem; }
+      .card-team-logo-wrap { width: 38px; height: 38px; padding: 5px; }
+      .card-vs { width: 30px; height: 30px; font-size: 0.62rem; }
+      .watch-btn { padding: 0.6rem 1.1rem; font-size: 0.72rem; }
+      .ad-slot-top { height: 70px; }
+      .ad-slot-sticky-bottom { height: 70px; }
+      .ad-slot-sticky-bottom .ad-inner { height: 70px; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ===== TOP HEADER BAR ===== -->
+  <div class="top-header">
+    <a href="index.html" class="brand">
+      <img src="https://nflwebcast.com/wp-content/uploads/2021/08/NFL-logo-01.svg" alt="NFLBite Logo">
+      <span>NFLBite</span>
+    </a>
+    <div class="header-right">
+      <div class="live-dot">
+        <i class="fas fa-circle"></i> Live
+      </div>
+      <a href="https://discord.gg/q2Vt5QHAz" target="_blank" rel="noopener noreferrer" class="header-discord">
+        <i class="fab fa-discord"></i> Join Discord
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== HEADER CONTAINER ===== -->
+  <div class="header-container">
+    <h1>NFLBite — Your First Stop for NFL Webcast &amp; Reddit NFL Streams</h1>
+    <p>
+      Fed up with fake links and slow mirrors? <span class="kw">NFLBite</span> collects every <span class="kw">NFL Webcast</span> feed and <span class="kw">Reddit NFL Streams</span> thread alongside NCAA, UFC, Boxing, NBA, MLB and Soccer boards — all on one sleek screen. <strong>NFL and NCAA categories jump to the front</strong> the second the API returns them, so the big games stay in the spotlight. Live tickers, self-updating listings, and a UI that feels like a top-tier sports app.
+    </p>
+  </div>
+
+  <!-- ===== AD SLOT: TOP 728x90 ===== -->
+  <div class="ad-slot-top" id="topBannerAd">
+    <button class="ad-close-btn" onclick="closeAd('topBannerAd')" title="Close ad">
+      <i class="fas fa-times"></i>
+    </button>
+    <script>
+      atOptions = {
+        'key' : '6786ca601524f56715d5859a0fc7658f',
+        'format' : 'iframe',
+        'height' : 90,
+        'width' : 728,
+        'params' : {}
+      };
+    </script>
+    <script src="https://czernik.org/22/6786ca601524f56715d5859a0fc7658f"></script>
+  </div>
+
+  <!-- ===== SPORT TABS ===== -->
+  <div class="sport-tabs" id="sportTabs">
+    <div class="sport-tab active" data-sport="all"><i class="fas fa-globe"></i> All</div>
+    <div class="sport-tab" data-sport="NFL"><i class="fas fa-football-ball"></i> NFL</div>
+    <div class="sport-tab" data-sport="NCAA"><i class="fas fa-football-ball"></i> NCAA</div>
+    <div class="sport-tab" data-sport="College Football"><i class="fas fa-football-ball"></i> CFB</div>
+    <div class="sport-tab" data-sport="UFC"><i class="fas fa-fist-raised"></i> UFC</div>
+    <div class="sport-tab" data-sport="MMA"><i class="fas fa-fist-raised"></i> MMA</div>
+    <div class="sport-tab" data-sport="Boxing"><i class="fas fa-fist-raised"></i> Boxing</div>
+    <div class="sport-tab" data-sport="Soccer"><i class="fas fa-futbol"></i> Soccer</div>
+    <div class="sport-tab" data-sport="MLB"><i class="fas fa-baseball-ball"></i> MLB</div>
+    <div class="sport-tab" data-sport="WNBA"><i class="fas fa-basketball-ball"></i> WNBA</div>
+  </div>
+
+  <!-- ===== MAIN LAYOUT ===== -->
+  <div class="main-layout">
+    <div class="content-area">
+      <div id="matchesContainer">
+        <div class="loading"><i class="fas fa-spinner fa-pulse"></i> Loading live matches...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ARTICLE SECTION ===== -->
+  <div class="article-section">
+
+    <h2>NFLBite Merges NFL Webcast &amp; Reddit NFL Streams Into One Smooth Experience</h2>
+    <p>
+      Sunday rush — nine tabs open, most stuck on a spinning wheel, and the game the group chat won't stop buzzing about is already in the fourth quarter. <span class="kw">NFLBite</span> kills that chaos on the spot. It streams <span class="kw">NFL Webcast</span> feeds, <span class="kw">Reddit NFL Streams</span> top picks, and every live NFL plus NCAA clash into one steady flow. The API keeps everything fresh, and NFL plus NCAA sections permanently park at the top, so marquee matchups never fade away.
+    </p>
+    <p>
+      No sign-ups. No plugins. No junk slowing your tap. <span class="kw">NFLBite</span> looks and acts identical on a phone at the tailgate, a tablet on the couch, or a massive desktop setup — hit play once and you're on the field.
+    </p>
+
+    <h2>NFL Webcast &amp; Reddit NFL Streams — Every Snap Synced, Every Whistle Counted</h2>
+    <p>
+      Football sets the rhythm of <span class="kw">NFLBite</span>, and the design wears it on its sleeve. Each NFL showdown, NCAA contest, and <span class="kw">NFL Webcast</span> broadcast grabs its own reserved tile — precise kickoff time, a live sweeping counter, and sharp team rows. <span class="kw">Reddit NFL Streams</span> picks are stacked right beside them, fully wired and a tap away from going live.
+    </p>
+    <ul>
+      <li><strong>NFL Webcast Tiles:</strong> Sunday afternoons, SNF, MNF, TNF, Turkey Day and playoff cards — all locked to the exact whistle.</li>
+      <li><strong>Reddit NFL Streams Picks:</strong> Curated <span class="kw">Reddit NFL Streams</span> selections with kickoff times, quick team notes, and instant jump buttons.</li>
+      <li><strong>NCAA &amp; CFB Grids:</strong> Rivalry Saturdays, conference finals, and bowl-week boards riding high whenever the feed returns them.</li>
+      <li><strong>NFLBite Cross-References:</strong> Every <span class="kw">NFLBite</span> tile links out to popular <span class="kw">NFL Webcast</span> and <span class="kw">Reddit NFL Streams</span> insights.</li>
+    </ul>
+
+    <h2>NFLBite Runs Hot All Year — NFL Webcast &amp; Reddit NFL Streams Across Every Season</h2>
+    <p>
+      Football and fight nights wear the crown, but <span class="kw">NFLBite</span> never shuts the lights. Each major league grabs its own tracked schedule the second its season arrives, guaranteeing a live card is always parked on the page.
+    </p>
+    <ul>
+      <li><strong>NFL &amp; NCAA:</strong> Kickoff clocks, division battles, and playoff sprints — amplified by <span class="kw">NFL Webcast</span> cross-refs.</li>
+      <li><strong>NFL Webcast &amp; Reddit NFL Streams:</strong> Sunday slates, primetime broadcasts, and postseason clashes.</li>
+      <li><strong>Boxing &amp; UFC:</strong> Title fights, undercards, and main events with live opening-bell times.</li>
+      <li><strong>NBA Basketball:</strong> Nightly tipoffs, matchup deep-dives, and shifting standings.</li>
+      <li><strong>MLB &amp; Soccer:</strong> Daily series, playoff ladders, and league tables — among the most-typed <span class="kw">NFLBite</span>, <span class="kw">NFL Webcast</span>, and <span class="kw">Reddit NFL Streams</span> queries.</li>
+    </ul>
+
+    <h2>Why NFLBite Leaves Every NFL Webcast &amp; Reddit NFL Streams Site Behind</h2>
+    <p>
+      Rock-solid counters. Weightless pages. A card-based look that feels premium from the first glance. <span class="kw">NFLBite</span> blends live scheduling with a sleek, dimmed interface that glides on any hardware. Whether you're scanning <span class="kw">NFL Webcast</span> boards, hopping through <span class="kw">Reddit NFL Streams</span> listings, or comparing kickoff clocks — every schedule, ticker, and matchup sits exactly where your thumb lands. NFL and NCAA sections stay glued to the top the moment the API delivers.
+    </p>
+
+    <!-- ===== FAQ SECTION ===== -->
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="faq-item">
+      <h3>What is NFLBite?</h3>
+      <p><span class="kw">NFLBite</span> is a live sports timetable hub that tracks <span class="kw">NFL Webcast</span>, <span class="kw">Reddit NFL Streams</span>, and NFL/NCAA matchups across Football, UFC, Boxing, NBA, MLB, NHL, Soccer, and beyond — all in one clean interface.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do I locate NFLBite's NFL Webcast and Reddit NFL Streams schedules?</h3>
+      <p>The <span class="kw">NFLBite</span> sports panel sorts every <span class="kw">NFL Webcast</span> and <span class="kw">Reddit NFL Streams</span> entry with real-time kickoff clocks, team logos, and direct watch buttons. NFL and NCAA tiles stay pinned up top whenever games are live.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Does NFLBite feature Reddit NFL Streams and NFL Webcast events?</h3>
+      <p>Definitely. <span class="kw">NFLBite</span> indexes <span class="kw">NFL Webcast</span> broadcasts and <span class="kw">Reddit NFL Streams</span> handpicks right beside every other major league sport.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Does NFLBite operate on mobile devices?</h3>
+      <p>Yep. <span class="kw">NFLBite</span> scales cleanly across phones, tablets, laptops, and desktops — no app install needed.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How fresh are NFLBite's schedules?</h3>
+      <p>Every <span class="kw">NFLBite</span> timetable and <span class="kw">NFL Webcast</span> countdown pulls from live data sources, so you see current kickoff times and matchup info. NFL and NCAA tiles rise to the top by themselves.</p>
+    </div>
+
+  </div>
+
+  <!-- footer -->
+  <div class="footer-note">
+    <span class="kw">NFLBite</span> · Live <span class="kw">NFL Webcast</span>, <span class="kw">Reddit NFL Streams</span>, NCAA, UFC, Boxing, NBA, MLB &amp; Soccer hub.
+  </div>
+</div>
+
+<!-- ===== FIXED SIDEBAR ADS (300x250 x2) ===== -->
+<div class="sidebar-area">
+  <div class="ad-slot-sidebar" id="sidebarAd1">
+    <button class="ad-close-btn" onclick="closeAd('sidebarAd1')" title="Close ad">
+      <i class="fas fa-times"></i>
+    </button>
+    <script>
+      atOptions = {
+        'key' : '8c159fd6fcf52c9cd44c80c9f4bbcfc4',
+        'format' : 'iframe',
+        'height' : 250,
+        'width' : 300,
+        'params' : {}
+      };
+    </script>
+    <script src="https://czernik.org/22/8c159fd6fcf52c9cd44c80c9f4bbcfc4"></script>
+  </div>
+  <div class="ad-slot-sidebar" id="sidebarAd2">
+    <button class="ad-close-btn" onclick="closeAd('sidebarAd2')" title="Close ad">
+      <i class="fas fa-times"></i>
+    </button>
+    <script>
+      atOptions = {
+        'key' : '8c159fd6fcf52c9cd44c80c9f4bbcfc4',
+        'format' : 'iframe',
+        'height' : 250,
+        'width' : 300,
+        'params' : {}
+      };
+    </script>
+    <script src="https://czernik.org/22/8c159fd6fcf52c9cd44c80c9f4bbcfc4"></script>
+  </div>
+</div>
+
+<!-- ===== AD SLOT: BOTTOM STICKY 728x90 ===== -->
+<div class="ad-slot-sticky-bottom" id="stickyBottomAd">
+  <div class="ad-inner">
+    <button class="ad-close-btn" onclick="closeAd('stickyBottomAd')" title="Close ad">
+      <i class="fas fa-times"></i>
+    </button>
+    <script>
+      atOptions = {
+        'key' : '6786ca601524f56715d5859a0fc7658f',
+        'format' : 'iframe',
+        'height' : 90,
+        'width' : 728,
+        'params' : {}
+      };
+    </script>
+    <script src="https://czernik.org/22/6786ca601524f56715d5859a0fc7658f"></script>
+  </div>
+</div>
+
+<script>
+  function closeAd(adId) {
+    const ad = document.getElementById(adId);
+    if (!ad) return;
+    ad.style.display = 'none';
+    setTimeout(function() {
+      ad.style.display = '';
+    }, 2500);
+  }
+
+  (function() {
+    const API_URL = "https://ovogoal.cyou/api/v2/flyembed2.json";
+    let allMatches = [];
+    let currentFilter = "all";
+
+    const container = document.getElementById('matchesContainer');
+    const sportTabs = document.querySelectorAll('.sport-tab');
+
+    function formatTime(timeStr) {
+      if (!timeStr) return 'TBD';
+      try {
+        const [hourStr, minute] = timeStr.split(':');
+        let hour = parseInt(hourStr, 10);
+        const ampm = hour >= 12 ? 'PM' : 'AM';
+        hour = hour % 12 || 12;
+        return `${hour}:${minute} ${ampm}`;
+      } catch (e) { return timeStr; }
+    }
+
+    function formatDate(dateStr) {
+      if (!dateStr) return '';
+      const parts = dateStr.split('-');
+      if (parts.length !== 3) return dateStr;
+      const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      const monthIdx = parseInt(parts[1], 10) - 1;
+      const day = parseInt(parts[2], 10);
+      return `${months[monthIdx]} ${day}`;
+    }
+
+    function getSportIcon(sport) {
+      const s = (sport || '').toLowerCase();
+      if (s === 'nfl') return 'fas fa-football-ball';
+      if (s === 'ncaa') return 'fas fa-football-ball';
+      if (s === 'college football' || s === 'cfb') return 'fas fa-football-ball';
+      if (s === 'soccer') return 'fas fa-futbol';
+      if (s === 'mlb') return 'fas fa-baseball-ball';
+      if (s === 'wnba') return 'fas fa-basketball-ball';
+      if (s === 'boxing') return 'fas fa-fist-raised';
+      if (s === 'nba') return 'fas fa-basketball-ball';
+      if (s === 'nhl') return 'fas fa-hockey-puck';
+      if (s === 'ufc' || s === 'mma') return 'fas fa-fist-raised';
+      return 'fas fa-trophy';
+    }
+
+    const SPORT_PRIORITY = {
+      'NFL': 1,
+      'NCAA': 2,
+      'College Football': 2,
+      'CFB': 2,
+      'UFC': 3,
+      'MMA': 3,
+      'Boxing': 4,
+      'Soccer': 5,
+      'MLB': 6,
+      'WNBA': 7,
+      'NBA': 8,
+      'NHL': 9
+    };
+
+    function getSportPriority(sport) {
+      if (SPORT_PRIORITY.hasOwnProperty(sport)) return SPORT_PRIORITY[sport];
+      return 99;
+    }
+
+    function groupBySport(matches) {
+      const groups = {};
+      matches.forEach(m => {
+        const sport = m.Sport || 'Other';
+        if (!groups[sport]) groups[sport] = [];
+        groups[sport].push(m);
+      });
+
+      const sortedSports = Object.keys(groups).sort((a, b) => {
+        return getSportPriority(a) - getSportPriority(b);
+      });
+      return { groups, sortedSports };
+    }
+
+    function buildSportSection(sport, matches) {
+      const section = document.createElement('div');
+      section.className = 'sport-section';
+
+      const header = document.createElement('div');
+      header.className = 'section-header';
+
+      const title = document.createElement('div');
+      title.className = 'section-title';
+      const icon = document.createElement('i');
+      icon.className = getSportIcon(sport);
+      title.appendChild(icon);
+      const firstMatch = matches[0];
+      if (firstMatch && firstMatch.LeagueLogo) {
+        const logoImg = document.createElement('img');
+        logoImg.src = firstMatch.LeagueLogo;
+        logoImg.alt = sport;
+        logoImg.onerror = function() { this.style.display = 'none'; };
+        title.appendChild(logoImg);
+      }
+      title.appendChild(document.createTextNode(sport));
+
+      const countBadge = document.createElement('div');
+      countBadge.className = 'section-count';
+      countBadge.textContent = `${matches.length} ${matches.length === 1 ? 'match' : 'matches'}`;
+
+      header.appendChild(title);
+      header.appendChild(countBadge);
+      section.appendChild(header);
+
+      const grid = document.createElement('div');
+      grid.className = 'match-cards-grid';
+
+      matches.sort((a, b) => {
+        const da = (a.MatchDate || '') + (a.MatchStartTime || '');
+        const db = (b.MatchDate || '') + (b.MatchStartTime || '');
+        return da.localeCompare(db);
+      });
+
+      matches.forEach(match => {
+        const card = document.createElement('div');
+        card.className = 'match-card';
+
+        const meta = document.createElement('div');
+        meta.className = 'card-meta';
+
+        const leagueDiv = document.createElement('div');
+        leagueDiv.className = 'card-league';
+        const leagueName = match.League?.replace(/\r?\n/g, ' ').trim() || match.Sport || 'Sports';
+        if (match.LeagueLogo) {
+          const lImg = document.createElement('img');
+          lImg.src = match.LeagueLogo;
+          lImg.alt = leagueName;
+          lImg.onerror = function() { this.style.display = 'none'; };
+          leagueDiv.appendChild(lImg);
+        }
+        const lSpan = document.createElement('span');
+        lSpan.textContent = leagueName;
+        leagueDiv.appendChild(lSpan);
+        meta.appendChild(leagueDiv);
+
+        const timeDiv = document.createElement('div');
+        timeDiv.className = 'card-time';
+        const clockIcon = document.createElement('i');
+        clockIcon.className = 'far fa-clock';
+        timeDiv.appendChild(clockIcon);
+        const tSpan = document.createElement('span');
+        tSpan.textContent = formatDate(match.MatchDate) + ' · ' + formatTime(match.MatchStartTime);
+        timeDiv.appendChild(tSpan);
+        meta.appendChild(timeDiv);
+
+        card.appendChild(meta);
+
+        const teamsDiv = document.createElement('div');
+        teamsDiv.className = 'card-teams';
+
+        const t1 = document.createElement('div');
+        t1.className = 'card-team';
+        const wrap1 = document.createElement('div');
+        wrap1.className = 'card-team-logo-wrap';
+        const img1 = document.createElement('img');
+        img1.src = match.Team1Logo || 'https://a.espncdn.com/i/teamlogos/default-team-logo-500.png';
+        img1.alt = match.Team1 || 'TBD';
+        img1.onerror = function() { this.src = 'https://a.espncdn.com/i/teamlogos/default-team-logo-500.png'; };
+        wrap1.appendChild(img1);
+        const n1 = document.createElement('span');
+        n1.className = 'card-team-name';
+        n1.textContent = match.Team1?.trim() || 'TBD';
+        t1.appendChild(wrap1);
+        t1.appendChild(n1);
+
+        const vs = document.createElement('div');
+        vs.className = 'card-vs';
+        vs.textContent = 'VS';
+
+        const t2 = document.createElement('div');
+        t2.className = 'card-team right';
+        const wrap2 = document.createElement('div');
+        wrap2.className = 'card-team-logo-wrap';
+        const img2 = document.createElement('img');
+        img2.src = match.Team2Logo || 'https://a.espncdn.com/i/teamlogos/default-team-logo-500.png';
+        img2.alt = match.Team2 || 'TBD';
+        img2.onerror = function() { this.src = 'https://a.espncdn.com/i/teamlogos/default-team-logo-500.png'; };
+        wrap2.appendChild(img2);
+        const n2 = document.createElement('span');
+        n2.className = 'card-team-name';
+        n2.textContent = match.Team2?.trim() || 'TBD';
+        t2.appendChild(n2);
+        t2.appendChild(wrap2);
+
+        teamsDiv.appendChild(t1);
+        teamsDiv.appendChild(vs);
+        teamsDiv.appendChild(t2);
+        card.appendChild(teamsDiv);
+
+        const actionDiv = document.createElement('div');
+        actionDiv.className = 'card-action';
+        const watchLink = document.createElement('a');
+        watchLink.className = 'watch-btn';
+        watchLink.href = 'stream1.html?id=' + encodeURIComponent(match.MatchID || '');
+        watchLink.target = '_blank';
+        watchLink.rel = 'noopener noreferrer';
+        const playIcon = document.createElement('i');
+        playIcon.className = 'fas fa-play';
+        watchLink.appendChild(playIcon);
+        watchLink.appendChild(document.createTextNode(' Watch Now'));
+        actionDiv.appendChild(watchLink);
+        card.appendChild(actionDiv);
+
+        grid.appendChild(card);
+      });
+
+      section.appendChild(grid);
+      return section;
+    }
+
+    function renderMatches() {
+      if (!allMatches.length) {
+        container.innerHTML = '<div class="error"><i class="fas fa-exclamation-triangle"></i> No matches found. Please try again later.</div>';
+        return;
+      }
+
+      let filtered = allMatches;
+      if (currentFilter !== 'all') {
+        filtered = allMatches.filter(m => (m.Sport || '').toLowerCase() === currentFilter.toLowerCase());
+      }
+
+      if (filtered.length === 0) {
+        container.innerHTML = `<div class="error"><i class="fas fa-search"></i> No ${currentFilter} matches available right now. Check back soon!</div>`;
+        return;
+      }
+
+      const { groups, sortedSports } = groupBySport(filtered);
+
+      const wrapper = document.createElement('div');
+      sortedSports.forEach(sport => {
+        if (groups[sport] && groups[sport].length > 0) {
+          wrapper.appendChild(buildSportSection(sport, groups[sport]));
+        }
+      });
+
+      container.innerHTML = '';
+      container.appendChild(wrapper);
+    }
+
+    async function fetchMatches() {
+      try {
+        const response = await fetch(API_URL);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        if (!Array.isArray(data)) throw new Error('Invalid data format');
+        allMatches = data;
+        renderMatches();
+      } catch (err) {
+        console.error('Fetch error:', err);
+        container.innerHTML = `<div class="error"><i class="fas fa-wifi"></i> Failed to load matches. ${err.message}<br><small>Please refresh or try again later.</small></div>`;
+      }
+    }
+
+    sportTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        sportTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        currentFilter = tab.dataset.sport;
+        renderMatches();
+      });
+    });
+
+    fetchMatches();
+  })();
+</script>
+
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,5048377,4,9,110,60,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?5048377&101" alt="website stats" border="0"></a></noscript>
+<!-- Histats.com  END -->
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"2bf2897404284a77b31f9236738b10ab","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
