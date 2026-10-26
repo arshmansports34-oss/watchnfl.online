@@ -900,8 +900,250 @@
   }
 
   (function() {
-    const API_URL = "https://ovogoal.cyou/api/v2/flyembed2.json";
-    let allMatches = [];
+    /* ============================================
+       MANUAL MATCH DATA (hardcoded)
+       ============================================ */
+    const allMatches = [
+      {
+        "MatchID": "401882828",
+        "Sport": "Soccer",
+        "League": "Laliga",
+        "LeagueLogo": "https://www.espn.com/i/teamlogos/soccer/500/default-team-logo-500.png?h=100&w=100",
+        "Team1": "Sevilla",
+        "Team1Logo": "https://a.espncdn.com/i/teamlogos/soccer/500/243.png",
+        "Team2": "Osasuna",
+        "Team2Logo": "https://a.espncdn.com/i/teamlogos/soccer/500/97.png",
+        "MatchDate": "2026-10-27",
+        "MatchStartTime": "01:00",
+        "MatchEndTime": "03:00",
+        "IframeURL": "https://flyembed.cfd/embed/1.php"
+      },
+      {
+        "MatchID": "401876422",
+        "Sport": "Soccer",
+        "League": "Ligue 1",
+        "LeagueLogo": "https://www.espn.com/i/teamlogos/soccer/500/default-team-logo-500.png?h=100&w=100",
+        "Team1": "Paris Saint-Germain",
+        "Team1Logo": "https://a.espncdn.com/i/teamlogos/soccer/500/160.png",
+        "Team2": "Lyon",
+        "Team2Logo": "https://a.espncdn.com/i/teamlogos/soccer/500/167.png",
+        "MatchDate": "2026-10-27",
+        "MatchStartTime": "00:30",
+        "MatchEndTime": "02:30",
+        "IframeURL": "https://flyembed.cfd/embed/2.php"
+      },
+      {
+        "MatchID": "401885414",
+        "Sport": "Soccer",
+        "League": "Portuguese Primeira Liga",
+        "LeagueLogo": "https://a.espncdn.com/i/leaguelogos/soccer/500/14.png",
+        "Team1": "Santa Clara",
+        "Team1Logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12215.png",
+        "Team2": "Benfica",
+        "Team2Logo": "https://a.espncdn.com/i/teamlogos/soccer/500/1929.png",
+        "MatchDate": "2026-10-26",
+        "MatchStartTime": "23:45",
+        "MatchEndTime": "01:45",
+        "IframeURL": "https://flyembed.cfd/embed/3.php"
+      },
+      {
+        "MatchID": "401909868",
+        "Sport": "NBA",
+        "League": "NBA",
+        "LeagueLogo": "https://a.espncdn.com/i/teamlogos/leagues/500/nba.png",
+        "Team1": "Charlotte Hornets",
+        "Team1Logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cha.png",
+        "Team2": "Washington Wizards",
+        "Team2Logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/wsh.png",
+        "MatchDate": "2026-10-27",
+        "MatchStartTime": "04:00",
+        "MatchEndTime": "06:00",
+        "IframeURL": "https://flyembed.cfd/embed/4.php"
+      },
+      {
+        "MatchID": "401909869",
+        "Sport": "NBA",
+        "League": "NBA",
+        "LeagueLogo": "https://a.espncdn.com/i/teamlogos/leagues/500/nba.png",
+        "Team1": "Cleveland Cavaliers",
+        "Team1Logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cle.png",
+        "Team2": "Minnesota Timberwolves",
+        "Team2Logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/min.png",
+        "MatchDate": "2026-10-27",
+        "MatchStartTime": "04:00",
+        "MatchEndTime": "06:00",
+        "IframeURL": "https://flyembed.cfd/embed/5.php"
+      },
+      {
+        "MatchID": "401909870",
+        "Sport": "NBA",
+        "League": "NBA",
+        "LeagueLogo": "https://a.espncdn.com/i/teamlogos/leagues/500/nba.png",
+        "Team1": "Boston Celtics",
+        "Team1Logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bos.png",
+        "Team2": "Chicago Bulls",
+        "Team2Logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/chi.png",
+        "MatchDate": "2026-10-27",
+        "MatchStartTime": "04:30",
+        "MatchEndTime": "06:30",
+        "IframeURL": "https://flyembed.cfd/embed/6.php"
+      },
+      {
+        "MatchID": "401909871",
+        "Sport": "NBA",
+        "League": "NBA",
+        "LeagueLogo": "https://a.espncdn.com/i/teamlogos/leagues/500/nba.png",
+        "Team1": "Miami Heat",
+        "Team1Logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png",
+        "Team2": "Dallas Mavericks",
+        "Team2Logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/dal.png",
+        "MatchDate": "2026-10-27",
+        "MatchStartTime": "04:30",
+        "MatchEndTime": "06:30",
+        "IframeURL": "https://flyembed.cfd/embed/7.php"
+      },
+      {
+        "MatchID": "401909872",
+        "Sport": "NBA",
+        "League": "NBA",
+        "LeagueLogo": "https://a.espncdn.com/i/teamlogos/leagues/500/nba.png",
+        "Team1": "Milwaukee Bucks",
+        "Team1Logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mil.png",
+        "Team2": "Indiana Pacers",
+        "Team2Logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png",
+        "MatchDate": "2026-10-27",
+        "MatchStartTime": "05:00",
+        "MatchEndTime": "07:00",
+        "IframeURL": "https://flyembed.cfd/embed/8.php"
+      },
+      {
+        "MatchID": "401909873",
+        "Sport": "NBA",
+        "League": "NBA",
+        "LeagueLogo": "https://a.espncdn.com/i/teamlogos/leagues/500/nba.png",
+        "Team1": "Oklahoma City Thunder",
+        "Team1Logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/okc.png",
+        "Team2": "Phoenix Suns",
+        "Team2Logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png",
+        "MatchDate": "2026-10-27",
+        "MatchStartTime": "05:00",
+        "MatchEndTime": "07:00",
+        "IframeURL": "https://flyembed.cfd/embed/9.php"
+      },
+      {
+        "MatchID": "401909874",
+        "Sport": "NBA",
+        "League": "NBA",
+        "LeagueLogo": "https://a.espncdn.com/i/teamlogos/leagues/500/nba.png",
+        "Team1": "Houston Rockets",
+        "Team1Logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/hou.png",
+        "Team2": "Atlanta Hawks",
+        "Team2Logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/atl.png",
+        "MatchDate": "2026-10-27",
+        "MatchStartTime": "05:30",
+        "MatchEndTime": "07:30",
+        "IframeURL": "https://flyembed.cfd/embed/10.php"
+      },
+      {
+        "MatchID": "401909875",
+        "Sport": "NBA",
+        "League": "NBA",
+        "LeagueLogo": "https://a.espncdn.com/i/teamlogos/leagues/500/nba.png",
+        "Team1": "Utah Jazz",
+        "Team1Logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/utah.png",
+        "Team2": "Memphis Grizzlies",
+        "Team2Logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png",
+        "MatchDate": "2026-10-27",
+        "MatchStartTime": "06:00",
+        "MatchEndTime": "08:00",
+        "IframeURL": "https://flyembed.cfd/embed/11.php"
+      },
+      {
+        "MatchID": "401909876",
+        "Sport": "NBA",
+        "League": "NBA",
+        "LeagueLogo": "https://a.espncdn.com/i/teamlogos/leagues/500/nba.png",
+        "Team1": "Denver Nuggets",
+        "Team1Logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/den.png",
+        "Team2": "Golden State Warriors",
+        "Team2Logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/gs.png",
+        "MatchDate": "2026-10-27",
+        "MatchStartTime": "07:00",
+        "MatchEndTime": "09:00",
+        "IframeURL": "https://flyembed.cfd/embed/12.php"
+      },
+      {
+        "MatchID": "401892582",
+        "Sport": "NHL",
+        "League": "NHL",
+        "LeagueLogo": "https://a.espncdn.com/i/teamlogos/leagues/500/nhl.png",
+        "Team1": "New York Rangers",
+        "Team1Logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/nyr.png",
+        "Team2": "Los Angeles Kings",
+        "Team2Logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/la.png",
+        "MatchDate": "2026-10-27",
+        "MatchStartTime": "04:00",
+        "MatchEndTime": "06:00",
+        "IframeURL": "https://flyembed.cfd/embed/13.php"
+      },
+      {
+        "MatchID": "401892583",
+        "Sport": "NHL",
+        "League": "NHL",
+        "LeagueLogo": "https://a.espncdn.com/i/teamlogos/leagues/500/nhl.png",
+        "Team1": "Calgary Flames",
+        "Team1Logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/cgy.png",
+        "Team2": "Toronto Maple Leafs",
+        "Team2Logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tor.png",
+        "MatchDate": "2026-10-27",
+        "MatchStartTime": "05:30",
+        "MatchEndTime": "07:30",
+        "IframeURL": "https://flyembed.cfd/embed/14.php"
+      },
+      {
+        "MatchID": "401892584",
+        "Sport": "NHL",
+        "League": "NHL",
+        "LeagueLogo": "https://a.espncdn.com/i/teamlogos/leagues/500/nhl.png",
+        "Team1": "Edmonton Oilers",
+        "Team1Logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/edm.png",
+        "Team2": "Detroit Red Wings",
+        "Team2Logo": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/det.png",
+        "MatchDate": "2026-10-27",
+        "MatchStartTime": "06:30",
+        "MatchEndTime": "08:30",
+        "IframeURL": "https://flyembed.cfd/embed/15.php"
+      },
+      {
+        "MatchID": "401873009",
+        "Sport": "NFL",
+        "League": "NFL",
+        "LeagueLogo": "https://a.espncdn.com/i/teamlogos/leagues/500/nfl.png",
+        "Team1": "Philadelphia Eagles",
+        "Team1Logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/phi.png",
+        "Team2": "Dallas Cowboys",
+        "Team2Logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/dal.png",
+        "MatchDate": "2026-10-27",
+        "MatchStartTime": "05:15",
+        "MatchEndTime": "07:15",
+        "IframeURL": "https://flyembed.cfd/embed/16.php"
+      },
+      {
+        "MatchID": "401908044",
+        "Sport": "MLB",
+        "League": "MLB",
+        "LeagueLogo": "https://a.espncdn.com/i/teamlogos/leagues/500/mlb.png",
+        "Team1": "Tampa Bay Rays",
+        "Team1Logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/tb.png",
+        "Team2": "Milwaukee Brewers",
+        "Team2Logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/mil.png",
+        "MatchDate": "2026-10-27",
+        "MatchStartTime": "05:00",
+        "MatchEndTime": "07:00",
+        "IframeURL": "https://flyembed.cfd/embed/17.php"
+      }
+    ];
+
     let currentFilter = "all";
 
     const container = document.getElementById('matchesContainer');
@@ -1142,20 +1384,6 @@
       container.appendChild(wrapper);
     }
 
-    async function fetchMatches() {
-      try {
-        const response = await fetch(API_URL);
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        const data = await response.json();
-        if (!Array.isArray(data)) throw new Error('Invalid data format');
-        allMatches = data;
-        renderMatches();
-      } catch (err) {
-        console.error('Fetch error:', err);
-        container.innerHTML = `<div class="error"><i class="fas fa-wifi"></i> Failed to load matches. ${err.message}<br><small>Please refresh or try again later.</small></div>`;
-      }
-    }
-
     sportTabs.forEach(tab => {
       tab.addEventListener('click', () => {
         sportTabs.forEach(t => t.classList.remove('active'));
@@ -1165,7 +1393,8 @@
       });
     });
 
-    fetchMatches();
+    /* ===== INITIAL RENDER ===== */
+    renderMatches();
   })();
 </script>
 
